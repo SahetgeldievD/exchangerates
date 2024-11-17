@@ -1,0 +1,8 @@
+nav {
+  background-color: green;
+  font-size: 24px;
+}
+
+nav li {
+  margin-left: 20px;
+}
