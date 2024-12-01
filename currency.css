@@ -1,0 +1,23 @@
+  #input-area {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 0px;
+    width: 500px;
+    height: 150px;
+    margin: 20px auto;
+  }
+  
+  #graph-container {
+    display: flex;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    background-color: rgba(0, 128, 0, 0.13);
+    color: black;
+    height: 500px;
+  }
+
+  #graph-container > svg {
+    align-self: center;
+    margin: auto;
+  }
