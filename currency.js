@@ -264,3 +264,25 @@
 
      }
  });
+
+ document.addEventListener('DOMContentLoaded', function () {
+    const exportBtn = document.getElementById('export-btn');
+    const graphContainer = document.getElementById('graph-container');
+    
+    const exportGraphAsImage = () => {
+        html2canvas(graphContainer, {
+            allowTaint: true,
+            useCORS: true,
+            logging: true
+        }).then(function (canvas) {
+            const link = document.createElement('a');
+            link.href = canvas.toDataURL('image/png'); // Создаем изображение в формате PNG
+            link.download = 'graph.png'; // Имя файла для скачивания
+            link.click(); // Имитируем клик по ссылке для начала загрузки
+        });
+    };
+    
+    if (exportBtn) {
+        exportBtn.addEventListener('click', exportGraphAsImage);
+    }
+});
